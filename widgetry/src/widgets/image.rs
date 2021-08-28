@@ -253,10 +253,10 @@ impl<'a, 'c> Image<'a, 'c> {
         self.source.as_ref().map(|source| {
             let (mut image_batch, image_bounds) = source.load(ctx.prerender);
 
-            image_batch = image_batch.color(
+            /*image_batch = image_batch.color(
                 self.color
                     .unwrap_or_else(|| RewriteColor::ChangeAll(ctx.style().icon_fg)),
-            );
+            );*/
 
             match self.dims {
                 None => {
